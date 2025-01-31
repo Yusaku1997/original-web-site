@@ -1,6 +1,229 @@
-h1{
-    color: red;
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Noto+Sans+JP:wght@100..900&display=swap");
+/* googleフォントから取得 */
+
+* {
+  font-family: "M PLUS Rounded 1c", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-/* 細めにメモを取る
-*/
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background: #ffa500;
+
+  .header-title {
+    color: #fff;
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 15px;
+
+    .header-link {
+      /* aタグの下線を消す */
+      text-decoration: none;
+      color: #fff;
+      font-weight: bolder;
+    }
+  }
+}
+
+.footer {
+  margin-top: 100px;
+  width: 100%;
+  height: 300px;
+  background-color: #ffa500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  position: relative;
+
+  .footer-icons {
+    .footer-icons-img {
+      /* 挿入する画像のpxが大きすぎたり小さすぎたりした時に、指定した範囲内で自動設定する */
+      min-width: 150px;
+      min-height: 150px;
+      max-width: 200px;
+      max-height: 200px;
+      border-radius: 50%;
+      /* ブロック要素にしか効かない左右中央にするもの */
+      margin: auto;
+    }
+
+    .footer-icons-title {
+      margin-top: 20px;
+      max-width: 300px;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 115%;
+      /* 折り返し禁止 */
+      white-space: nowrap;
+      /* はみ出し禁止 */
+      overflow: hidden;
+    }
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .footer-nav-link {
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-nav-line {
+      width: 30px;
+      height: 1px;
+      border: none;
+      background: #fff;
+    }
+  }
+
+  .footer-arrow {
+    position: absolute;
+    bottom: 50px;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  .foooter-copyright {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 12px;
+  }
+}
+
+.blog-list {
+  .blog-list-title {
+    font-weight: normal;
+    font-size: 32px;
+    padding: 5px;
+    border-bottom: 1px solid #999;
+  }
+
+  .blog-list-cards {
+    .blog-list-card {
+      display: flex;
+      gap: 40px;
+      padding: 10px 10px 10px 0;
+      border-bottom: 1px solid #ccc;
+      text-decoration: none;
+      color: #000;
+
+      /* マウスが当たった時に変化を起こすアニメーション */
+      &:hover {
+        .blog-list-card-img {
+          transform: scale(1.2);
+        }
+      }
+
+      .blog-list-card-img-outer {
+        min-width: 200px;
+        min-height: 200px;
+        overflow: hidden;
+
+        .blog-list-card-img {
+          width: 100%;
+          height: 100%;
+          transition: 0.5s;
+        }
+      }
+
+      .blog-list-card-contents {
+        .blog-list-card-title {
+          margin-top: 20px;
+          width: 100%;
+          max-width: 100%;
+          font-size: 16px;
+          line-height: 115%;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-clamp: 2;
+          -webkit-line-clamp: 2;
+          word-break: break-word;
+        }
+
+        .blog-list-card-excerpt {
+          margin-top: 15px;
+          width: 100%;
+          font-size: 13px;
+          line-height: 115%;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-clamp: 3;
+          -webkit-line-clamp: 3;
+          word-break: break-word;
+        }
+
+        .blog-list-card-categories {
+          margin-top: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+        }
+      }
+    }
+  }
+
+  .blog-list-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 1px solid #ffa500;
+    border-radius: 9999px;
+    margin-top: 30px;
+    float: right;
+    transition: 1s;
+
+    &:hover {
+      background: #ffa500;
+
+      span {
+        color: #fff;
+      }
+
+      svg {
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+
+    span {
+      color: #ffa500;
+    }
+  }
+}
+
+.blog-date {
+  font-size: 12px;
+  color: #666;
+}
+
+.category {
+  padding: 3px 10px;
+  border: 1px solid #aaa;
+  border-radius: 9999px;
+  color: #666;
+  font-size: 12px;
+}

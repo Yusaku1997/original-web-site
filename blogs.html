@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/blog.css" />
+
+    <title>ブログ一覧</title>
+  </head>
+  <body>
+    <!-- 共通ヘッダー -->
+    <header class="header">
+      <h1 class="header-title">リスクんの有事に備える防災ブログ</h1>
+
+      <nav class="header-nav">
+        <a href="/" class="header-link">ホーム</a>
+        <a href="/blogs.html" class="header-link">ブログ</a>
+        <a href="/contact.html" class="header-link">お問い合わせ</a>
+      </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="container">
+      <section class="blog-list">
+        <h3 class="blog-list-title">最新記事一覧</h3>
+        <div class="blog-list-cards"></div>
+      </section>
+
+      <section class="ad-list">ここに広告を挿入する予定</section>
+    </main>
+
+    <!-- 共通フッター -->
+    <footer class="footer">
+      <div class="footer-icons">
+        <img
+          src="./assets/img/リスクん.JPEG"
+          alt="イラスト"
+          class="footer-icons-img"
+        />
+
+        <p class="footer-icons-title">リスクんの有事に備える防災ブログ</p>
+      </div>
+
+      <nav class="footer-nav">
+        <a href="/index.html" class="footer-nav-link">ホーム</a>
+        <hr class="footer-nav-line" />
+        <a href="/blog.html" class="footer-nav-link">ブログ一覧</a>
+        <hr class="footer-nav-line" />
+        <a href="/contact.html" class="footer-nav-link">問い合わせ</a>
+      </nav>
+
+      <svg
+        class="footer-arrow"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+        <path
+          d="M12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22Z"
+          stroke="#fff"
+          stroke-width="2"
+        />
+        <path
+          d="M12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22Z"
+          stroke="#fff"
+          stroke-width="2"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M16.5 13.5L12 9L7.5 13.5"
+          stroke="#fff"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+
+      <span class="foooter-copyright">&copy;リスクん</span>
+    </footer>
+
+    <script src="./assets/js/common.js"></script>
+    <script type="module" src="./assets/js/getBlogs.js"></script>
+  </body>
+</html>
